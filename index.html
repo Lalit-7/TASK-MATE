@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Mate</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <h2>Menu</h2>
+            <nav>
+                <a href="#" id="homePage" class="menu-link active">Home</a>
+                <a href="#" id="tasksPage" class="menu-link">Tasks</a>
+                <a href="#" id="statsPage" class="menu-link">Statistics</a>
+                <a href="#" id="journalHistoryPage" class="menu-link">Journal History</a>
+            </nav>
+        </aside>
+
+        <div class="main-content">
+            <div class="content">
+
+                <div id="home" class="page">
+                    <h1>Welcome to <span class="taskmate-title">Task Mate</span></h1>
+                    <p>Manage your tasks efficiently.</p>
+
+                    <div class="daily-journal">
+                        <h2>Daily Journal</h2>
+                        <textarea id="journalEntry" placeholder="Write your daily thoughts..."></textarea>
+                        <button id="saveJournalButton">Save Entry</button>
+                        <p id="journalStatus"></p>
+                    </div>
+
+                    <div class="quote-section">
+                        <p id="quoteDisplay">Consistency leads to success.</p>
+                    </div>
+                </div>
+
+                <div id="tasks" class="page hidden">
+                    <h1>Task Management</h1>
+                    <div class="task-input">
+                        <input type="text" id="taskInput" placeholder="Enter a new task">
+                        <select id="taskCategory">
+                            <option value="General">General</option>
+                            <option value="Work">Work</option>
+                            <option value="Personal">Personal</option>
+                            <option value="Urgent">Urgent</option>
+                        </select>
+                        <select id="taskPriority">
+                            <option value="Low">Low</option>
+                            <option value="Medium">Medium</option>
+                            <option value="High">High</option>
+                        </select>
+                        <button id="addTaskButton">Add Task</button>
+                    </div>
+                    <ul id="taskList"></ul>
+                </div>
+
+                <div id="stats" class="page hidden">
+                    <h1>Task Statistics</h1>
+                    <ul id="statsList">
+                        <li>Total Tasks: <span id="totalTasks">0</span></li>
+                        <li>High Priority Tasks: <span id="highPriorityTasks">0</span></li>
+                        <li>Work Tasks: <span id="workTasks">0</span></li>
+                        <li>Personal Tasks: <span id="personalTasks">0</span></li>
+                        <li>Urgent Tasks: <span id="urgentTasks">0</span></li>
+                    </ul>
+                </div>
+
+                <div id="journalHistory" class="page hidden">
+                    <h1>Journal History</h1>
+                    <div id="journalDisplay"></div>
+                </div>
+            </div>
+
+            <div class="timer-section">
+                <h2>Overall Timer</h2>
+                <input type="number" id="timerMinutes" placeholder="Enter minutes" min="1">
+                <button id="startTimerButton">Start Timer</button>
+                <div id="timerDisplay">Time left: 00:00</div>
+            </div>
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
